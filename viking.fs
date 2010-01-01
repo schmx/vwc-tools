@@ -12,7 +12,6 @@
 : s  ( n -- n )
 	1000 *
 ;
-
 : alarm  ( -- )
 	bell 50 ms bell 50 ms bell
 ;
@@ -56,11 +55,9 @@
 : cadence-time  ( n n -- n )
 	s swap /
 ;
-
 : wait  ( n -- )
 	1 s - ms alarm 900 ms
 ;
-
 : beep  ( n n -- )
 	1 u+do
 		bell i . dup ms
@@ -74,11 +71,9 @@
 : cadence-time-15  ( n -- n )
 	15 cadence-time
 ;
-
 : beep-15  ( n -- )
 	dup cadence-time-15 swap beep
 ;
-
 : wait-15  ( n -- )
 	15 s wait
 ;
@@ -98,15 +93,12 @@
 : cadence-time-36  ( n -- n )
 	36 cadence-time	
 ;
-
 : wait-36  ( -- )
 	36 s wait
 ;
-
 : beep-36  ( n -- )
 	dup cadence-time-36 swap beep
 ;
-
 : 36:36  ( n -- )
 	\ Supply with # of reps you be wanting.
 	\ TODO: factor this + 15:15
