@@ -111,7 +111,7 @@
 	\ Supply with # of reps you be wanting.
 	\ TODO: factor this + 15:15
 	cr
-	35 1 u+do
+	36 1 u+do
 		i . ." : " dup beep-36 wait-36 cr
 	loop drop
 ;
