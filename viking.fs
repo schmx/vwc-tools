@@ -9,14 +9,15 @@
 \ 36:36 protocol -   cadence 36:36
 \
 
-
-60000 constant ms-in-a-minute
+: s  ( n -- n )
+	1000 *
+;
 
 : alarm  ( -- )
 	bell 50 ms bell 50 ms bell
 ;
 : pause-between-reps  ( n -- n )
-	ms-in-a-minute swap /
+	60 s swap /
 ;
 
 
@@ -38,7 +39,7 @@
 	loop drop alarm cr
 ;
 : last-test-minute  ( -- )
-	ms-in-a-minute ms alarm
+	60 s alarm
 ;
 : cmvo2-test  ( -- )
 	10 test-minute
@@ -49,9 +50,8 @@
 ;
 
 
-: s  ( n -- n)
-	1000 *
-;
+
+
 
 : cadence-time  ( n n -- n )
 	s swap /
