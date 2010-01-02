@@ -62,6 +62,7 @@
 	1 u+do
 		bell i . dup ms
 	loop alarm 200 - ms alarm
+	\ TODO : Add printout of last rep #
 ; 
 
 \
@@ -79,7 +80,6 @@
 ;
 : 15:15  ( n -- )
 	\ Supply with # of reps you be wanting.
-	\ TODO: factor this + 36:36
 	cr
 	81 1 u+do
 		i . ." : " dup beep-15 wait-15 cr
@@ -101,7 +101,6 @@
 ;
 : 36:36  ( n -- )
 	\ Supply with # of reps you be wanting.
-	\ TODO: factor this + 15:15
 	cr
 	36 1 u+do
 		i . ." : " dup beep-36 wait-36 cr
