@@ -56,12 +56,12 @@
 	s swap /
 ;
 : wait  ( n -- )
-	1 s - ms alarm 900 ms
+	3 s - ms alarm 2900 ms
 ;
 : beep  ( n n -- )
 	1 u+do
 		bell i . dup ms
-	loop 100 - ms alarm
+	loop alarm 200 - ms alarm
 ; 
 
 \
